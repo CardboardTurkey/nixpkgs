@@ -64,14 +64,14 @@ assert lib.assertMsg (!hidpiXWayland) "The option `hidpiXWayland` has been remov
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "hyprland" + lib.optionalString debug "-debug";
-  version = "0.41.2";
+  version = "master";
 
   src = fetchFromGitHub {
     owner = "hyprwm";
     repo = "hyprland";
     fetchSubmodules = true;
-    rev = "refs/tags/v${finalAttrs.version}";
-    hash = "sha256-JmfnYz+9a4TjNl3mAus1VpoWtTI9d1xkW9MHbkcV0Po=";
+    rev = "bd526822deb9ed47c0b51b534817aa8541fff07b";
+    hash = "sha256-vO6wBIaInnyIQqmsKc28AsFSWeCFgnFilNhv2zoN/tU=";
   };
 
   postPatch = ''
